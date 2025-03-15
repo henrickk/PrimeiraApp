@@ -19,7 +19,7 @@ namespace PrimeiraApp.Models
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [StringLength(60, ErrorMessage = "O campo {0} precisa ter no máximo {1} caracteres")]
-        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2.4}$", ErrorMessage = "O campo {0} está em formato inválido.")]
+        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "O campo {0} está em formato inválido.")]
         public string? Email { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
